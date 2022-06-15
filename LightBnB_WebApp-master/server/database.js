@@ -107,14 +107,7 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 const getAllProperties = function(options, limit = 10) {
-//   SELECT properties.id, title, cost_per_night, avg(property_reviews.rating) as average_rating
-// FROM properties
-// LEFT JOIN property_reviews ON properties.id = property_id
-// WHERE city LIKE '%ancouv%'
-// GROUP BY properties.id
-// HAVING avg(property_reviews.rating) >= 4
-// ORDER BY cost_per_night
-// LIMIT 10;
+
 console.log("Options: ", options);
 // 1
 const queryParams = [];
@@ -141,8 +134,6 @@ if (options.city && (options.minimum_price_per_night || options.maximum_price_pe
 } else if (options.minimum_price_per_night || options.maximum_price_per_night ) {
   queryString += 'WHERE '
 }
-
-
 
 if (options.minimum_price_per_night && options.maximum_price_per_night) {
   queryParams.push(options.minimum_price_per_night + '00');
@@ -171,8 +162,6 @@ queryString += `
 ORDER BY cost_per_night
 LIMIT $${queryParams.length};
 `;
-
-
 
 // 5
 console.log(queryString, queryParams);

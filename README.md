@@ -3,6 +3,7 @@
 ## Project Structure
 
 ```
+├── 1_queries
 ├── LightBnB_WebApp 
 │    ├── public
 │    │   ├── index.html
@@ -31,6 +32,7 @@
 └── seeds
 
 ```
+* `1_queries` contains some SELECT queries on lightbnb database tables.
 * `LightBnB_WebApp` is an app which was not working with original database. We connected it with database and made it work with original database.
   * `public` contains all of the HTML, CSS, and client side JavaScript. 
     * `index.html` is the entry point to the application. It's the only html page because this is a single page application.

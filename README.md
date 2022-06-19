@@ -1,4 +1,5 @@
 # LightBnB
+It's all about that database. We build the back-end queries that allow users to search for accommodations in an online travel app. We will connect to a `PostgreSQL` database using `Node's postgres library` and write the queries that deliver the right data to the front end.
 
 ## Project Structure
 
@@ -56,3 +57,13 @@
 2. Initiate `psql` session in your project directory, create database `lightbnb` and then run `migrations` and `seeds` files.
 3. cd into the LightBnB_WebApp directory. Run the app using the `npm run local` command. 
 4. Go to <http://localhost:3000/> in your browser.
+
+## Dependencies
+
+- Express
+- Node 5.10.x or above
+- body-parser
+- bcrypt
+- cookie-session
+- nodemon
+- pg
